@@ -1,7 +1,9 @@
 <?php namespace Hapiwork\Freshdesk;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+
 
 class FreshdeskServiceProvider extends ServiceProvider {
     
@@ -11,11 +13,13 @@ class FreshdeskServiceProvider extends ServiceProvider {
         }
     }
 
+
     public function register()
     {
         $this->registerResources();
-
+        
         $this->registerRoutes();
+
     }
 
     public function registerResources() {
@@ -44,7 +48,8 @@ class FreshdeskServiceProvider extends ServiceProvider {
 
     protected function routeConfiguration() {
         return [
-            'namespace' => 'Hapiwork\Freshdesk\Http\Controllers'
+            'namespace' => 'Hapiwork\Freshdesk\Http\Controllers',
+            //'middleware' => 'auth'
         ];
     }
 

@@ -1,7 +1,9 @@
-<?php 
+<?php
 
+use Illuminate\Http\Request ;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
-
-Route::view('freshdesk/template', 'hapiwork-freshdesk::template.index');
-Route::get('freshdesk/test', 'TestController@index');
+Route::get('freshdesk/test/package', function() {
+    dd(\App\Model\User::find(1)) ;
+});

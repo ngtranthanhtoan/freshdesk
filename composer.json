@@ -2,6 +2,7 @@
     "name": "hapiwork/freshdesk",
     "description": "A package for intaracting with freshdesk service through API",
     "license": "MIT",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "Toan Nguyen",
